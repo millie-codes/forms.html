@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width",intial-scale="1.0">
+        <title>Students Registretion Form</title>
+    </head>
+    <body>
+        <h2>Students Registration Form</h2>
+        <form action="registration_handler.php" method="post"></form>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="dob">Date of Birth:</label><br>
+        <input type="date" id="dob" name="dob" required><br><br>
+        <fieldset>
+            <legend>Gender:</legend>
+            <input type="radio" id="male" name="gender"value="male"required>
+            <label for="male">Male</label>
+            <input type="radio"id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>
+        </fieldset>
+        <label for="address"><Address>Address:</label><br>
+            <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+            <label for="telephone">Telephone</label><br>
+            <input type="tel" id="telephone" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="course">Course:</label><br>
+            <select id="course" name="course" required>
+                <option value="">Select Course</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Business Administration">Business Administration</option>
+                 <option value="Medicine">Medicine</option>
+            </select><br><br>
+            <fieldset>
+                <legend>Accessibility Matters</legend>
+               <label for="accessibility_info">Accessibility Information:</label><br>
+               <textarea id="accessibility_info" name="accessibility_info" rows="4" cols="50"></textarea><br><br>
+            </fieldset>
+            <fieldset>
+                <legend>Courses Interested In:</legend>
+                <input type="checkbox" id="course_cs" name="course_interest[]" value="Computer Science">
+                <label for="course_cs">Computer Science</label><br>
+                <input type="checkbox" id="course_eng" name="course_interest[]" value="Engineering">
+                <label for="course_eng">Engineering</label><br>
+                <input type="checkbox" id="course_ba" name="course_interest[]" value="Business Administration">
+                <label for="course_ba">Business Administration</label><br>
+                <input type="checkbox" id="course_med" name="course_interest[]" value="Medicine">
+                <label for="course_med">Medicine</label><br><br>
+            </fieldset>
+            <button type="submit">Register</button>
+            <button type="reset">Cancel</button>
+        </form>
+    </body>
+</html>
